@@ -17,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import reports.ExtentManager;
 
@@ -51,7 +52,16 @@ public class BaseTest {
         String browser = prop.getProperty("browser");
 
         if (browser.equalsIgnoreCase("chrome")) {
-            wd = new ChromeDriver();
+
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless=new");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--window-size=1920,1080");
+
+            wd = new ChromeDriver(options);
+       
         } else if (browser.equalsIgnoreCase("firefox")) {
             wd = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("edge")) {
