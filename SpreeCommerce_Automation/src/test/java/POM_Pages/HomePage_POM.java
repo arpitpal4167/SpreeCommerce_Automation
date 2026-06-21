@@ -22,11 +22,11 @@ public class HomePage_POM extends BasePage {
     private WebElement btn_User;
     
     // Sign Out
-    @FindBy(xpath = "//button[contains(text(),'Sign Out') or contains(text(),'Logout')]")
+    @FindBy(xpath = "//button[contains(.,'Sign Out') or contains(.,'Logout') or contains(.,'Log out')]")
     private WebElement signout;
 
     // Search Icon
-    @FindBy(xpath = "//button[contains(@aria-label,'Search') or contains(.,'Search')]")
+    @FindBy(xpath = "/html/body/header/div[1]/div/div/div[3]/button[1]")
     private WebElement searchicon;
 
     // Search Input
