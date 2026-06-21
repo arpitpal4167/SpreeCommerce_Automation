@@ -16,6 +16,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import org.openqa.selenium.edge.EdgeOptions;
 
 import reports.ExtentManager;
 
@@ -54,7 +55,12 @@ public class BaseTest {
         } else if (browser.equalsIgnoreCase("firefox")) {
             wd = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("edge")) {
-            wd = new EdgeDriver();
+            EdgeOptions options = new EdgeOptions();
+            options.addArguments("--headless=new");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--remote-allow-origins=*");
+
+            wd = new EdgeDriver(options);
         }
 
         wd.manage().window().maximize();
