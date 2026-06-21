@@ -19,7 +19,7 @@ public class CheckoutPage_POM extends BasePage {
 
 	}
 
-	@FindBy(xpath = "//*[@id=\"ship-country\"]")
+	@FindBy(id = "ship-country")
 	private WebElement selectCountry;
 
 	@FindBy(id = "ship-first_name")

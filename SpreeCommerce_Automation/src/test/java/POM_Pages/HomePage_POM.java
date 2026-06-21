@@ -18,15 +18,15 @@ public class HomePage_POM extends BasePage {
     }
 
     // User Icon
-    @FindBy(xpath = "//a[contains(@href,'account')]")
+    @FindBy(xpath = "//a[contains(@href,'login') or contains(@href,'account') or contains(@href,'user')]")
     private WebElement btn_User;
-
+    
     // Sign Out
     @FindBy(xpath = "//button[contains(text(),'Sign Out') or contains(text(),'Logout')]")
     private WebElement signout;
 
     // Search Icon
-    @FindBy(xpath = "/html/body/header/div[1]/div/div/div[3]/button[1]")
+    @FindBy(xpath = "//button[contains(@aria-label,'Search') or contains(.,'Search')]")
     private WebElement searchicon;
 
     // Search Input

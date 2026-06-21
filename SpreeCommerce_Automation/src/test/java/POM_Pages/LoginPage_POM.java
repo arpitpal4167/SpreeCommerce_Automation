@@ -20,7 +20,7 @@ public class LoginPage_POM extends BasePage{
 	
 	//Locators repository
 	
-	@FindBy(xpath = "/html/body/header/div[1]/div/div/div[3]/div[2]/a" )
+	@FindBy(xpath = "//a[contains(@href,'login') or contains(@href,'account') or contains(@href,'user')]")
 	private WebElement btn_UserIcon;
 	
    @FindBy(id = "email")
@@ -29,7 +29,7 @@ public class LoginPage_POM extends BasePage{
    @FindBy(id = "password")
    private WebElement Login_passwordInput;
    
-   @FindBy(xpath = "/html/body/main/div[1]/div/div[2]/form/div[4]/button")
+   @FindBy(xpath = "//button[@type='submit']")
    private WebElement btn_signup;
    
    @FindBy(xpath = "/html/body/header/div[1]/div/div/div[2]/a/img")
