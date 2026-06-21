@@ -55,10 +55,16 @@ public class BaseTest {
         } else if (browser.equalsIgnoreCase("firefox")) {
             wd = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("edge")) {
+
             EdgeOptions options = new EdgeOptions();
             options.addArguments("--headless=new");
             options.addArguments("--disable-gpu");
             options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-extensions");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--user-data-dir=C:\\JenkinsEdgeProfile");
 
             wd = new EdgeDriver(options);
         }
