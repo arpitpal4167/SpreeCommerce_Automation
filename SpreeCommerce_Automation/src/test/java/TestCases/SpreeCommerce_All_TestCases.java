@@ -152,6 +152,9 @@ public class SpreeCommerce_All_TestCases extends BaseTest{
         CartPage_POM c = new CartPage_POM(wd);
         CheckoutPage_POM ch = new CheckoutPage_POM(wd);
 
+        wd.get("https://demo.spreecommerce.org/login");
+        Thread.sleep(3000);
+
         l.login(email, password);
         Thread.sleep(3000);
 
