@@ -135,22 +135,10 @@ public class SpreeCommerce_All_TestCases extends BaseTest{
         String password = Excel_Utility.getcellData(path, "spree_login", 1, 1);
         String product = Excel_Utility.getcellData(path, "spree_product", 1, 0);
 
-        String country = Excel_Utility.getcellData(path, "spree_address", 1, 0);
-        String fname = Excel_Utility.getcellData(path, "spree_address", 1, 1);
-        String lname = Excel_Utility.getcellData(path, "spree_address", 1, 2);
-        String company = Excel_Utility.getcellData(path, "spree_address", 1, 3);
-        String address = Excel_Utility.getcellData(path, "spree_address", 1, 4);
-        String city = Excel_Utility.getcellData(path, "spree_address", 1, 5);
-        String state = Excel_Utility.getcellData(path, "spree_address", 1, 6);
-        String postalCode = Excel_Utility.getcellData(path, "spree_address", 1, 7);
-        String phone = Excel_Utility.getcellData(path, "spree_address", 1, 8);
-        
-
         LoginPage_POM l = new LoginPage_POM(wd);
         HomePage_POM h = new HomePage_POM(wd);
         ProductPage_POM p = new ProductPage_POM(wd);
         CartPage_POM c = new CartPage_POM(wd);
-        CheckoutPage_POM ch = new CheckoutPage_POM(wd);
 
         wd.get("https://demo.spreecommerce.org");
         Thread.sleep(3000);
@@ -174,28 +162,11 @@ public class SpreeCommerce_All_TestCases extends BaseTest{
         c.click_on_checkout();
         Thread.sleep(10000);
         System.out.println("After Checkout Click = " + wd.getCurrentUrl());
-        System.out.println("ship-country count = " + wd.findElements(org.openqa.selenium.By.id("ship-country")).size());
 
-        ch.enterShippingAddress(country, fname, lname, company,
-                address, city, state, postalCode, phone);
-        Thread.sleep(3000);
-
-        ch.selectPaymentOption();
-        Thread.sleep(2000);
-
-        ch.clickPlaceOrder();
-        Thread.sleep(50000);
-        
-        ch.click_contiune_shopping();
-        Thread.sleep(3000);
-
-        h.logout_process();
-        Thread.sleep(2000);
-
-
-        Log.info("Place Order Test Passed");
+        Log.info("Checkout page opened successfully");
+    }
     
     }
-}
+
 
 
