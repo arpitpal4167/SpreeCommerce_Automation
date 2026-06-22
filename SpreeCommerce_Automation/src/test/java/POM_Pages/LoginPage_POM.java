@@ -12,11 +12,12 @@ import helper.BaseTest;
 public class LoginPage_POM extends BasePage{
 
 	private Logger log = LogManager.getLogger(LoginPage_POM.class);
-	public LoginPage_POM(WebDriver driver) 
+	private WebDriver wd;
+	public LoginPage_POM(WebDriver driver)
 	{
-		super(driver);
-		
-}
+	    super(driver);
+	    this.wd = driver;
+	}
 	
 	//Locators repository
 	
@@ -68,15 +69,20 @@ public class LoginPage_POM extends BasePage{
    
    public void login(String Lemail, String Lpass) throws InterruptedException
    {
+       wd.get("https://demo.spreecommerce.org/login");
+       Thread.sleep(3000);
+
        enteremail(Lemail);
        Thread.sleep(2000);
+
        enterpassword(Lpass);
        Thread.sleep(2000);
+
        clicksignupbtn();
        Thread.sleep(2000);
+
        navigatehomepage();
        Thread.sleep(2000);
    }
-	
 	
 }
