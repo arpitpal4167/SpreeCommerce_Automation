@@ -68,16 +68,14 @@ public class LoginPage_POM extends BasePage{
    
    public void login(String Lemail, String Lpass) throws InterruptedException
    {
-	   LoginUserIcon();
-	   Thread.sleep(2000);
-	   enteremail(Lemail);
-	   Thread.sleep(2000);
-	   enterpassword(Lpass);
-	   Thread.sleep(2000);
-	   clicksignupbtn();
-	   Thread.sleep(2000);
-	   navigatehomepage();
-	   Thread.sleep(2000);
+       enteremail(Lemail);
+       Thread.sleep(2000);
+       enterpassword(Lpass);
+       Thread.sleep(2000);
+       clicksignupbtn();
+       Thread.sleep(2000);
+       navigatehomepage();
+       Thread.sleep(2000);
    }
 	
 	
