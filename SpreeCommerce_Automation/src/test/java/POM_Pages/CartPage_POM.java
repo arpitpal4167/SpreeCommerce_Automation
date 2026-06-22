@@ -30,7 +30,7 @@ public class CartPage_POM extends BasePage{
 	@FindBy(xpath = "/html/body/main/div[1]/div/div[1]/div/div[1]/div[3]/button")
 	private WebElement btn_ConShopping;
 	
-	@FindBy(xpath = "/html/body/main/div/div/div[2]/div/div/a[1]")
+	@FindBy(xpath = "//a[contains(@href,'checkout') or contains(.,'Checkout')]")
 	private WebElement btn_checkout;
 	
 	public void click_on_cartIcon()
@@ -55,8 +55,9 @@ public class CartPage_POM extends BasePage{
 	
 	public void click_on_checkout()
 	{
-		btn_checkout.click();
-		log.info("Clicked on Checkout button");
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].click();", btn_checkout);
+	    log.info("Clicked on Checkout button");
 	}
 
 }
