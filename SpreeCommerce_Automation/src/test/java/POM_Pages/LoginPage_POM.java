@@ -1,85 +1,63 @@
 package POM_Pages;
 
+import java.time.Duration;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import helper.BasePage;
-import helper.BaseTest;
 
-public class LoginPage_POM extends BasePage{
+public class LoginPage_POM extends BasePage {
 
-	private WebDriver wd;
-	private Logger log = LogManager.getLogger(LoginPage_POM.class);
-	public LoginPage_POM(WebDriver driver)
-	{
-	    super(driver);
-	    this.wd = driver;
-	}
-	
-	//Locators repository
-	
-	@FindBy(xpath = "//a[contains(@href,'login') or contains(@href,'account') or contains(@href,'user')]")
-	private WebElement btn_UserIcon;
-	
-   @FindBy(id = "email")
-   private WebElement Login_emailInput;
-   
-   @FindBy(id = "password")
-   private WebElement Login_passwordInput;
-   
-   @FindBy(xpath = "//button[@type='submit']")
-   private WebElement btn_signup;
-   
-   @FindBy(xpath = "/html/body/header/div[1]/div/div/div[2]/a/img")
-   private WebElement btn_homepage;
-   
-   public void LoginUserIcon()
-	{
-	   btn_UserIcon.click();
-		log.info("Clicked Registration icon");
-	}
-   
-   public void enteremail(String Lemail) {
-	   Login_emailInput.clear();
-	   Login_emailInput.sendKeys(Lemail);
-	   log.info("Entered email");
-   }
-   
-   public void enterpassword(String Lpass)
-   {
-	   Login_passwordInput.clear();
-	   Login_passwordInput.sendKeys(Lpass);
-	   log.info("Entered password");
-   }
-   
-   public void clicksignupbtn()
-   {
-	   btn_signup.click();
-	   log.info("Clicked Signup button");
-   }
-   
-   public void navigatehomepage()
-   {
-	   btn_homepage.click();
-	   log.info("Navigated Home Page");
-   }
-   
-   public void login(String Lemail, String Lpass) throws InterruptedException
-   {
-       wd.get("https://demo.spreecommerce.org/login");
-       Thread.sleep(5000);
+    private WebDriver wd;
+    private Logger log = LogManager.getLogger(LoginPage_POM.class);
 
-       enteremail(Lemail);
-       Thread.sleep(2000);
+    public LoginPage_POM(WebDriver driver) {
+        super(driver);
+        this.wd = driver;
+    }
 
-       enterpassword(Lpass);
-       Thread.sleep(2000);
+    @FindBy(id = "email")
+    private WebElement Login_emailInput;
 
-       clicksignupbtn();
-       Thread.sleep(3000);
-   }
-	
+    @FindBy(id = "password")
+    private WebElement Login_passwordInput;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    private WebElement btn_signup;
+
+    public void enteremail(String Lemail) {
+        Login_emailInput.clear();
+        Login_emailInput.sendKeys(Lemail);
+        log.info("Entered email");
+    }
+
+    public void enterpassword(String Lpass) {
+        Login_passwordInput.clear();
+        Login_passwordInput.sendKeys(Lpass);
+        log.info("Entered password");
+    }
+
+    public void clicksignupbtn() {
+        btn_signup.click();
+        log.info("Clicked Login button");
+    }
+
+    public void login(String Lemail, String Lpass) {
+        wd.get("https://demo.spreecommerce.org/login");
+
+        System.out.println("Current URL = " + wd.getCurrentUrl());
+
+        WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(Login_emailInput));
+
+        enteremail(Lemail);
+        enterpassword(Lpass);
+        clicksignupbtn();
+    }
 }
