@@ -7,6 +7,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import helper.BasePage;
 
@@ -21,7 +29,7 @@ public class CheckoutPage_POM extends BasePage {
 
 	@FindBy(id = "ship-country")
 	private WebElement selectCountry;
-
+	
 	@FindBy(id = "ship-first_name")
 	private WebElement shipfirstname;
 
@@ -61,31 +69,50 @@ public class CheckoutPage_POM extends BasePage {
 	
 	
 	
-	public void enterShippingAddress(String country, String fname, String lname, String company, String address,
-			String city, String state, String postalCode, String phone) throws InterruptedException {
-		
-		Select sc = new Select(selectCountry);
-		sc.selectByVisibleText(country);
+	public void enterShippingAddress(String country, String fname, String lname,
+	        String company, String address, String city,
+	        String state, String postalCode, String phone) {
 
-		shipfirstname.clear();
-		Thread.sleep(2000);
-		shipfirstname.sendKeys(fname);
-		Thread.sleep(2000);
-		shipLastName.clear();
-		Thread.sleep(2000);
-		shipLastName.sendKeys(lname);
-		Thread.sleep(2000);
-		shipCompany.sendKeys(company);
-		Thread.sleep(2000);
-		shipAddress.sendKeys(address);
-		Thread.sleep(2000);
-		shipCity.sendKeys(city);
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-		Select st = new Select(shipState);
-		st.selectByVisibleText(state);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ship-country")));
 
-		shipPostalcode.sendKeys(postalCode);
-		shipPhone.sendKeys(phone);
+	    Select sc = new Select(selectCountry);
+	    sc.selectByVisibleText(country);
+
+	    wait.until(ExpectedConditions.visibilityOf(shipfirstname));
+	    shipfirstname.clear();
+	    shipfirstname.sendKeys(fname);
+
+	    wait.until(ExpectedConditions.visibilityOf(shipLastName));
+	    shipLastName.clear();
+	    shipLastName.sendKeys(lname);
+
+	    wait.until(ExpectedConditions.visibilityOf(shipCompany));
+	    shipCompany.clear();
+	    shipCompany.sendKeys(company);
+
+	    wait.until(ExpectedConditions.visibilityOf(shipAddress));
+	    shipAddress.clear();
+	    shipAddress.sendKeys(address);
+
+	    wait.until(ExpectedConditions.visibilityOf(shipCity));
+	    shipCity.clear();
+	    shipCity.sendKeys(city);
+
+	    wait.until(ExpectedConditions.visibilityOf(shipState));
+	    Select st = new Select(shipState);
+	    st.selectByVisibleText(state);
+
+	    wait.until(ExpectedConditions.visibilityOf(shipPostalcode));
+	    shipPostalcode.clear();
+	    shipPostalcode.sendKeys(postalCode);
+
+	    wait.until(ExpectedConditions.visibilityOf(shipPhone));
+	    shipPhone.clear();
+	    shipPhone.sendKeys(phone);
+
+	    log.info("Shipping Address Entered Successfully");
 	}
 	
 	public void selectPaymentOption()
