@@ -5,9 +5,9 @@
     <classes>
       <class name="TestCases.SpreeCommerce_All_TestCases">
         <methods>
-          <include name="add_to_cart_testcase"/>
           <include name="closeReport"/>
           <include name="setupReport"/>
+          <include name="registration_testcase"/>
           <include name="closeBrowser"/>
           <include name="initialize_n_OpenBrowser"/>
         </methods>

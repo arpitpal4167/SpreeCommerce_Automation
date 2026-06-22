@@ -32,12 +32,9 @@ public class SpreeCommerce_All_TestCases extends BaseTest{
 
         r.Registrations(fname, lname, email, password, confirmpass);
         Thread.sleep(3000);
-       
-        h.click_on_signout();
-        
-       // h.logout_process();
-        Thread.sleep(3000);
-        
+
+        // h.click_on_signout();
+
         Log.info("Registration test completed");
     }
     

@@ -2,6 +2,7 @@ package POM_Pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,8 +40,10 @@ public class HomePage_POM extends BasePage {
     }
 
     public void click_on_signout() {
-        signout.click();
-        log.info("User Logged out");
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", signout);
+
     }
 
     public void click_on_searchIcon() {
