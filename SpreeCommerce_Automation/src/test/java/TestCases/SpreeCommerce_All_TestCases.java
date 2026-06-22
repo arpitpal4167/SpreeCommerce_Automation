@@ -152,7 +152,7 @@ public class SpreeCommerce_All_TestCases extends BaseTest{
         CartPage_POM c = new CartPage_POM(wd);
         CheckoutPage_POM ch = new CheckoutPage_POM(wd);
 
-        wd.get("https://demo.spreecommerce.org/login");
+        wd.get("https://demo.spreecommerce.org");
         Thread.sleep(3000);
 
         l.login(email, password);
@@ -169,9 +169,11 @@ public class SpreeCommerce_All_TestCases extends BaseTest{
 
         c.click_on_viewCart();
         Thread.sleep(3000);
+        System.out.println("After View Cart = " + wd.getCurrentUrl());
 
         c.click_on_checkout();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
+        System.out.println("After Checkout Click = " + wd.getCurrentUrl());
 
         ch.enterShippingAddress(country, fname, lname, company,
                 address, city, state, postalCode, phone);
