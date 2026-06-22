@@ -172,8 +172,9 @@ public class SpreeCommerce_All_TestCases extends BaseTest{
         System.out.println("After View Cart = " + wd.getCurrentUrl());
 
         c.click_on_checkout();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         System.out.println("After Checkout Click = " + wd.getCurrentUrl());
+        System.out.println("ship-country count = " + wd.findElements(org.openqa.selenium.By.id("ship-country")).size());
 
         ch.enterShippingAddress(country, fname, lname, company,
                 address, city, state, postalCode, phone);
