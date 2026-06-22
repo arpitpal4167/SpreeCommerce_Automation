@@ -49,12 +49,12 @@ public class LoginPage_POM extends BasePage {
     }
 
     public void login(String Lemail, String Lpass) {
-        wd.get("https://demo.spreecommerce.org/login");
+        wd.get("https://demo.spreecommerce.org/us/en/account");
 
         System.out.println("Current URL = " + wd.getCurrentUrl());
 
         WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(Login_emailInput));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='email']")));
 
         enteremail(Lemail);
         enterpassword(Lpass);
