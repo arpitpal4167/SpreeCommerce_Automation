@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-22T07:31:04 IST" name="Suite" finished-at="2026-06-22T07:35:10 IST" duration-ms="245377">
+  <suite started-at="2026-06-28T22:44:19 IST" name="Suite" finished-at="2026-06-28T22:46:50 IST" duration-ms="150571">
     <groups>
     </groups>
-    <test started-at="2026-06-22T07:31:04 IST" name="Test" finished-at="2026-06-22T07:35:10 IST" duration-ms="245377">
+    <test started-at="2026-06-28T22:44:19 IST" name="Test" finished-at="2026-06-28T22:46:50 IST" duration-ms="150571">
       <class name="TestCases.SpreeCommerce_All_TestCases">
-        <test-method is-config="true" signature="setupReport()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:31:04 IST" name="setupReport" finished-at="2026-06-22T07:31:04 IST" duration-ms="273" status="PASS">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:44:19 IST" name="setupReport" finished-at="2026-06-28T22:44:19 IST" duration-ms="178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupReport -->
-        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:31:05 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-22T07:31:15 IST" duration-ms="10949" status="PASS">
+        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:44:19 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-28T22:44:21 IST" duration-ms="2118" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,155 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize_n_OpenBrowser -->
-        <test-method signature="registration_testcase()[pri:1, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:31:16 IST" name="registration_testcase" finished-at="2026-06-22T07:31:39 IST" duration-ms="23448" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(.,'Sign Out') or contains(.,'Logout') or contains(.,'Log out')]"}
-  (Session info: chrome=149.0.7827.115)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d45fc4e0e824f0c9e1da735dce40d6c, findElement {using=xpath, value=//button[contains(.,'Sign Out') or contains(.,'Logout') or contains(.,'Log out')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\vspal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59822}, goog:processID: 10468, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59822/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d45fc4e0e824f0c9e1da735dce40d6c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(.,'Sign Out') or contains(.,'Logout') or contains(.,'Log out')]"}
-  (Session info: chrome=149.0.7827.115)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d45fc4e0e824f0c9e1da735dce40d6c, findElement {using=xpath, value=//button[contains(.,'Sign Out') or contains(.,'Logout') or contains(.,'Log out')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\vspal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59822}, goog:processID: 10468, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59822/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d45fc4e0e824f0c9e1da735dce40d6c
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy24.getWrappedElement(Unknown Source)
-at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:486)
-at POM_Pages.HomePage_POM.click_on_signout(HomePage_POM.java:45)
-at TestCases.SpreeCommerce_All_TestCases.registration_testcase(SpreeCommerce_All_TestCases.java:36)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="registration_testcase()[pri:1, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:44:22 IST" name="registration_testcase" finished-at="2026-06-28T22:44:50 IST" duration-ms="27969" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registration_testcase -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:31:39 IST" name="closeBrowser" finished-at="2026-06-22T07:31:39 IST" duration-ms="236" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:44:50 IST" name="closeBrowser" finished-at="2026-06-28T22:44:50 IST" duration-ms="544" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:31:39 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-22T07:31:41 IST" duration-ms="1651" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void TestCases.SpreeCommerce_All_TestCases.login_testcase() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize_n_OpenBrowser -->
-        <test-method signature="login_testcase()[pri:2, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:31:41 IST" name="login_testcase" finished-at="2026-06-22T07:32:03 IST" duration-ms="21564" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login_testcase -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:32:03 IST" name="closeBrowser" finished-at="2026-06-22T07:32:03 IST" duration-ms="254" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:32:03 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-22T07:32:04 IST" duration-ms="1480" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void TestCases.SpreeCommerce_All_TestCases.search_product_testcase() throws java.io.IOException,java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize_n_OpenBrowser -->
-        <test-method signature="search_product_testcase()[pri:3, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:32:04 IST" name="search_product_testcase" finished-at="2026-06-22T07:32:30 IST" duration-ms="25916" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- search_product_testcase -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:32:30 IST" name="closeBrowser" finished-at="2026-06-22T07:32:31 IST" duration-ms="328" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:32:31 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-22T07:32:32 IST" duration-ms="1790" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void TestCases.SpreeCommerce_All_TestCases.add_to_cart_testcase() throws java.io.IOException,java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize_n_OpenBrowser -->
-        <test-method signature="add_to_cart_testcase()[pri:4, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:32:32 IST" name="add_to_cart_testcase" finished-at="2026-06-22T07:33:10 IST" duration-ms="38007" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_to_cart_testcase -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:33:10 IST" name="closeBrowser" finished-at="2026-06-22T07:33:11 IST" duration-ms="315" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:33:11 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-22T07:33:12 IST" duration-ms="1748" status="PASS">
+        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:44:50 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-28T22:44:52 IST" duration-ms="1861" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -181,15 +41,72 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize_n_OpenBrowser -->
-        <test-method signature="place_order_testcase()[pri:5, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:33:12 IST" name="place_order_testcase" finished-at="2026-06-22T07:35:10 IST" duration-ms="117146" status="PASS">
+        <test-method signature="place_order_testcase()[pri:2, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:44:52 IST" name="place_order_testcase" finished-at="2026-06-28T22:45:40 IST" duration-ms="48349" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- place_order_testcase -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:35:10 IST" name="closeBrowser" finished-at="2026-06-22T07:35:10 IST" duration-ms="278" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:45:40 IST" name="closeBrowser" finished-at="2026-06-28T22:45:41 IST" duration-ms="546" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="closeReport()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-22T07:35:10 IST" name="closeReport" finished-at="2026-06-22T07:35:11 IST" duration-ms="811" status="PASS">
+        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:45:41 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-28T22:45:43 IST" duration-ms="1682" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCases.SpreeCommerce_All_TestCases.search_product_testcase() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize_n_OpenBrowser -->
+        <test-method signature="search_product_testcase()[pri:3, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:45:43 IST" name="search_product_testcase" finished-at="2026-06-28T22:46:01 IST" duration-ms="18774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_product_testcase -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:46:01 IST" name="closeBrowser" finished-at="2026-06-28T22:46:02 IST" duration-ms="641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:46:02 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-28T22:46:04 IST" duration-ms="2004" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCases.SpreeCommerce_All_TestCases.add_to_cart_testcase() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize_n_OpenBrowser -->
+        <test-method signature="add_to_cart_testcase()[pri:4, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:46:04 IST" name="add_to_cart_testcase" finished-at="2026-06-28T22:46:33 IST" duration-ms="29364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add_to_cart_testcase -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:46:33 IST" name="closeBrowser" finished-at="2026-06-28T22:46:34 IST" duration-ms="706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="initialize_n_OpenBrowser(java.lang.reflect.Method)[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:46:34 IST" name="initialize_n_OpenBrowser" finished-at="2026-06-28T22:46:36 IST" duration-ms="1836" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCases.SpreeCommerce_All_TestCases.login_testcase() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize_n_OpenBrowser -->
+        <test-method signature="login_testcase()[pri:5, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:46:36 IST" name="login_testcase" finished-at="2026-06-28T22:46:49 IST" duration-ms="13340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_testcase -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:46:49 IST" name="closeBrowser" finished-at="2026-06-28T22:46:50 IST" duration-ms="530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:TestCases.SpreeCommerce_All_TestCases@34a97744]" started-at="2026-06-28T22:46:50 IST" name="closeReport" finished-at="2026-06-28T22:46:50 IST" duration-ms="391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeReport -->

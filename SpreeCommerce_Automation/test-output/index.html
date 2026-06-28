@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.SpreeCommerce_All_TestCases" class="method navigator-link" hash-for-method="registration_testcase">registration_testcase</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -132,6 +118,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.SpreeCommerce_All_TestCases" class="method navigator-link" hash-for-method="registration_testcase">registration_testcase</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestCases.SpreeCommerce_All_TestCases" class="method navigator-link" hash-for-method="search_product_testcase">search_product_testcase</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -147,58 +138,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestCases.SpreeCommerce_All_TestCases</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="registration_testcase">
-                  </a> <!-- registration_testcase -->
-                  <span class="method-name">registration_testcase</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(.,&apos;Sign Out&apos;) or contains(.,&apos;Logout&apos;) or contains(.,&apos;Log out&apos;)]&quot;}
-  (Session info: chrome=149.0.7827.115)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d45fc4e0e824f0c9e1da735dce40d6c, findElement {using=xpath, value=//button[contains(.,&apos;Sign Out&apos;) or contains(.,&apos;Logout&apos;) or contains(.,&apos;Log out&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\vspal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59822}, goog:processID: 10468, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59822/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d45fc4e0e824f0c9e1da735dce40d6c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy24.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:486)
-	at POM_Pages.HomePage_POM.click_on_signout(HomePage_POM.java:45)
-	at TestCases.SpreeCommerce_All_TestCases.registration_testcase(SpreeCommerce_All_TestCases.java:36)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -224,6 +163,13 @@ Session ID: 2d45fc4e0e824f0c9e1da735dce40d6c
                   <a name="place_order_testcase">
                   </a> <!-- place_order_testcase -->
                   <span class="method-name">place_order_testcase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registration_testcase">
+                  </a> <!-- registration_testcase -->
+                  <span class="method-name">registration_testcase</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -291,28 +237,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'place_order_testcase')
 data.setCell(0, 2, 'TestCases.SpreeCommerce_All_TestCases')
-data.setCell(0, 3, 117146);
+data.setCell(0, 3, 48349);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'add_to_cart_testcase')
 data.setCell(1, 2, 'TestCases.SpreeCommerce_All_TestCases')
-data.setCell(1, 3, 38007);
+data.setCell(1, 3, 29364);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'search_product_testcase')
+data.setCell(2, 1, 'registration_testcase')
 data.setCell(2, 2, 'TestCases.SpreeCommerce_All_TestCases')
-data.setCell(2, 3, 25916);
+data.setCell(2, 3, 27969);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'registration_testcase')
+data.setCell(3, 1, 'search_product_testcase')
 data.setCell(3, 2, 'TestCases.SpreeCommerce_All_TestCases')
-data.setCell(3, 3, 23448);
+data.setCell(3, 3, 18774);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'login_testcase')
 data.setCell(4, 2, 'TestCases.SpreeCommerce_All_TestCases')
-data.setCell(4, 3, 21564);
+data.setCell(4, 3, 13340);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -345,69 +291,67 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">initialize_n_OpenBrowser(public void TestCases.SpreeCommerce_All_TestCases.registration_testcase() throws java.io.IOException...)</span>
-                <span class="method-start">321 ms</span>
+                <span class="method-start">214 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">registration_testcase</span>
-                <span class="method-start">11388 ms</span>
+                <span class="method-start">2502 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">34864 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">initialize_n_OpenBrowser(public void TestCases.SpreeCommerce_All_TestCases.login_testcase() throws java.lang.Exception)</span>
-                <span class="method-start">35105 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">login_testcase</span>
-                <span class="method-start">36758 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">58333 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">initialize_n_OpenBrowser(public void TestCases.SpreeCommerce_All_TestCases.search_product_testcase() throws java.io.IOExcepti...)</span>
-                <span class="method-start">58590 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">search_product_testcase</span>
-                <span class="method-start">60072 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">86002 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">initialize_n_OpenBrowser(public void TestCases.SpreeCommerce_All_TestCases.add_to_cart_testcase() throws java.io.IOException,...)</span>
-                <span class="method-start">86334 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">add_to_cart_testcase</span>
-                <span class="method-start">88127 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">126148 ms</span>
+                <span class="method-start">30492 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize_n_OpenBrowser(public void TestCases.SpreeCommerce_All_TestCases.place_order_testcase() throws java.io.IOException,...)</span>
-                <span class="method-start">126467 ms</span>
+                <span class="method-start">31049 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">place_order_testcase</span>
-                <span class="method-start">128219 ms</span>
+                <span class="method-start">32913 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">245370 ms</span>
+                <span class="method-start">81277 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initialize_n_OpenBrowser(public void TestCases.SpreeCommerce_All_TestCases.search_product_testcase() throws java.io.IOExcepti...)</span>
+                <span class="method-start">81826 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">search_product_testcase</span>
+                <span class="method-start">83510 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">102296 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initialize_n_OpenBrowser(public void TestCases.SpreeCommerce_All_TestCases.add_to_cart_testcase() throws java.io.IOException,...)</span>
+                <span class="method-start">102941 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">add_to_cart_testcase</span>
+                <span class="method-start">104948 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">134322 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initialize_n_OpenBrowser(public void TestCases.SpreeCommerce_All_TestCases.login_testcase() throws java.lang.Exception)</span>
+                <span class="method-start">135031 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login_testcase</span>
+                <span class="method-start">136874 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">150217 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">closeReport</span>
-                <span class="method-start">245773 ms</span>
+                <span class="method-start">150815 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

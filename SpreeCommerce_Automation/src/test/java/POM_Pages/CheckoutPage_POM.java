@@ -27,6 +27,9 @@ public class CheckoutPage_POM extends BasePage {
 
 	}
 
+	@FindBy(id = "email")
+	private WebElement checkout_email; 
+	
 	@FindBy(id = "ship-country")
 	private WebElement selectCountry;
 	
@@ -54,14 +57,20 @@ public class CheckoutPage_POM extends BasePage {
 	@FindBy(id = "ship-phone")
 	private WebElement shipPhone;
 
-	@FindBy(xpath = "//*[@id=\"checkout-section-payment\"]/div/div[1]/div[1]/label")
-	private WebElement paymentOption;
+	@FindBy(xpath = "//label[contains(.,'Premium')]")
+	private WebElement premiumShipping;
 
-	@FindBy(xpath = "/html/body/div[2]/div[3]/div[1]/div[1]/div[2]/div/div[3]/div/div[2]/label/button")
-	private WebElement sameshipAddress;
+	@FindBy(xpath = "//label[contains(.,'Standard')]")
+	private WebElement standardShipping;
 
-	@FindBy(xpath = "/html/body/div[2]/div[3]/div[1]/div[1]/div[2]/div/button")
-	private WebElement btn_placeorder;
+	@FindBy(xpath = "//label[contains(.,'On terms')]")
+	private WebElement onTermsPayment;
+
+	@FindBy(id = "policy-consent")
+	private WebElement termsCondition;
+
+	@FindBy(xpath = "//button[contains(text(),'Place Order')]")
+	private WebElement placeOrderBtn;
 
 	@FindBy(xpath = "/html/body/div[2]/div[2]/div[1]/div[1]/div[2]/div[5]/a")
 	private WebElement btn_contiuneshopping;
@@ -69,14 +78,20 @@ public class CheckoutPage_POM extends BasePage {
 	
 	
 	
-	public void enterShippingAddress(String country, String fname, String lname,
+	
+	
+	public void enterShippingAddress( String country, String fname, String lname,
 	        String company, String address, String city,
 	        String state, String postalCode, String phone) {
 
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
+	    
+	   
+	    //wait.until(ExpectedConditions.visibilityOf(checkout_email));
+	    //checkout_email.clear();
+	    //checkout_email.sendKeys(ch_email);
+	    
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ship-country")));
-
 	    Select sc = new Select(selectCountry);
 	    sc.selectByVisibleText(country);
 
@@ -111,23 +126,25 @@ public class CheckoutPage_POM extends BasePage {
 	    wait.until(ExpectedConditions.visibilityOf(shipPhone));
 	    shipPhone.clear();
 	    shipPhone.sendKeys(phone);
+	    
+	    
 
 	    log.info("Shipping Address Entered Successfully");
 	}
 	
 	public void selectPaymentOption()
 	{
-	    paymentOption.click();
+		onTermsPayment.click();
 	}
-
-	public void clickSameShippingAddress()
+	
+	public void termcondition()
 	{
-	    sameshipAddress.click();
+		termsCondition.click();
 	}
 
 	public void clickPlaceOrder()
 	{
-	    btn_placeorder.click();
+		placeOrderBtn.click();
 	}
 	
 	public void click_contiune_shopping()
